@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Muhammad Sannan  Muhammad</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-section {
+            padding: 6rem 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            color: var(--text-main);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="personal-profile.html" class="logo"><strong>Muhammad Sannan  Web DevelopeR</strong></a>
+                <ul class="nav-links">
+                    <li><a href="personal-profile.html">Home</a></li>
+                    <li><a href="personal-profile.html">Profile</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="navigation.html">Navigation</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <a href="registration.html" class="btn btn-primary">Join Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section animate-in">
+            <h1 style="text-align: center;">Get in Touch</h1>
+            <p class="text-muted" style="text-align: center;">Have a question? Send me a message below.</p>
+
+            <!-- IMPORTANT: Replace 'mqakvjzd' with your OWN Formspree ID to make this form work! -->
+            <form action="https://formspree.io/f/mqakvjzd" method="POST" class="contact-form glass">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Portfolio Message!">
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-info">© 2026 Muhammad Sannan | Lab 02 Assessment</p>
+            <p class="text-muted">Form powered by Formspree</p>
+        </div>
+    </footer>
+</body>
+
+</html>
