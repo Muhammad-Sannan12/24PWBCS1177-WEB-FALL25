@@ -1,0 +1,3 @@
+# Lab 01 Reflection Report
+
+In this lab, I learned how to use Git for version control. I practiced creating a repository, adding and committing files, and pushing changes to GitHub. I also learned how to create and switch between branches, which allows developers to work on new features without affecting the main project. Merging branches helped me understand how changes from different branches can be combined into the main branch. Overall, this lab improved my understanding of Git and how it is used in real-world development.

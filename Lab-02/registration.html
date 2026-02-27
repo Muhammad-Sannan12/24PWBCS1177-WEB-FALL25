@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .sub {
+            font-size: 14px;
+            color: #555;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .radio-group {
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .checkbox {
+            margin-top: 12px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1a252f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Student Registration Form</h2>
+    <h3 class="sub">CS 224L Web Technologies</h3>
+    <h3 class="sub">Mr. Mohammad, Lecturer</h3>
+    <h3 class="sub">Department of Computer Science</h3>
+    <h3 class="sub">UET Peshawar</h3>
+
+    <form>
+        <!-- Name -->
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <!-- Registration Number -->
+        <label>Registration Number</label>
+        <input type="text" placeholder="e.g. 2022-CS-001" required>
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email" placeholder="example@email.com" required>
+
+        <!-- Password -->
+        <label>Password</label>
+        <input type="password" required>
+
+        <!-- Course Dropdown -->
+        <label>Select Course</label>
+        <select required>
+            <option value="">-- Select Course --</option>
+            <option>Web Technologies</option>
+            <option>Operating Systems</option>
+            <option>Artificial Intelligence</option>
+            <option>Data Science</option>
+        </select>
+
+        <!-- Semester Radio Buttons -->
+        <label>Semester</label>
+        <div class="radio-group">
+            <input type="radio" name="semester" required> 2nd
+            <input type="radio" name="semester"> 4th
+            <input type="radio" name="semester"> 6th
+            <input type="radio" name="semester"> 8th
+        </div>
+
+        <!-- Terms Checkbox -->
+        <div class="checkbox">
+            <input type="checkbox" required> I agree to the terms and conditions
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Register</button>
+    </form>
+
+</div>
+
+</body>
+</html>
