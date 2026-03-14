@@ -1,0 +1,80 @@
+
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+/* Gallery Layout */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+/* Image Container */
+
+.card{
+    position:relative;
+    width:250px;
+    overflow:hidden;
+}
+
+/* Images */
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px; /* Rounded corners */
+    border:4px solid white; /* Border */
+    box-shadow:0 4px 10px rgba(0,0,0,0.3); /* Shadow */
+    transition:0.4s;
+}
+
+/* Hover Zoom Effect */
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+/* Circular Image */
+
+.circle img{
+    border-radius:50%;
+}
+
+/* CSS Filters */
+
+.filter1 img{
+    filter:grayscale(100%);
+}
+
+.filter2 img{
+    filter:sepia(80%);
+}
+
+.filter3 img{
+    filter:blur(2px);
+}
+
+/* Overlay */
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:10px;
+    opacity:0;
+    transition:0.4s;
+}
+
+.card:hover .overlay{
+    opacity:1;
+}

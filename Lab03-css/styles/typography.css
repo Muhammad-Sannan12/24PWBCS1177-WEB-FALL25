@@ -1,0 +1,100 @@
+
+/* Page Style */
+body{
+    font-family: Roboto, sans-serif;
+    margin: 40px;
+}
+
+/* ---------------- GOOGLE FONTS ---------------- */
+
+/* Font 1 */
+.font1{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Font 2 */
+.font2{
+    font-family: 'Lobster', cursive;
+}
+
+/* Font 3 */
+.font3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ---------------- FONT SIZE UNITS ---------------- */
+
+.px{
+    font-size: 24px;
+}
+
+.em{
+    font-size: 2em;
+}
+
+.rem{
+    font-size: 2rem;
+}
+
+.percent{
+    font-size: 150%;
+}
+
+
+/* ---------------- TEXT ALIGNMENT ---------------- */
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+
+/* ---------------- TEXT DECORATION ---------------- */
+
+.underline{
+    text-decoration: underline;
+}
+
+.overline{
+    text-decoration: overline;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+
+/* ---------------- TEXT TRANSFORMATION ---------------- */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+
+/* ---------------- TEXT SHADOW ---------------- */
+
+.shadow1{
+    font-size: 40px;
+    text-shadow: 2px 2px 5px gray;
+}
+
+.shadow2{
+    font-size: 40px;
+    text-shadow: 3px 3px 8px blue;
+}

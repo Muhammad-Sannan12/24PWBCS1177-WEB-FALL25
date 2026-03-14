@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Styled Registration Form</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background: linear-gradient(120deg,#74ebd5,#ACB6E5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Form Container */
+.form-box{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h2{
+    text-align:center;
+}
+
+/* Input Fields */
+input, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:2px solid #ccc;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+/* Focus State */
+input:focus, select:focus{
+    border-color:#4CAF50;
+    box-shadow:0 0 5px rgba(76,175,80,0.5);
+    outline:none;
+}
+
+/* Dropdown Styling */
+select{
+    background:white;
+    cursor:pointer;
+}
+
+/* Button Styling */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:5px;
+    background:#4CAF50;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+button:hover{
+    background:#45a049;
+}
+
+/* Error State */
+.error{
+    border-color:red;
+}
+
+.error-text{
+    color:red;
+    font-size:12px;
+}
+
+/* Success Message */
+.success{
+    margin-top:15px;
+    padding:10px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:5px;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Registration Form</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" class="error">
+<div class="error-text">Invalid email address</div>
+
+<label>Password</label>
+<input type="password" placeholder="Enter password">
+
+<label>Country</label>
+<select>
+<option>Select Country</option>
+<option>Pakistan</option>
+<option>USA</option>
+<option>UK</option>
+</select>
+
+<button type="submit">Register</button>
+
+</form>
+
+<div class="success">
+Registration Successful!
+</div>
+
+</div>
+
+</body>
+</html>

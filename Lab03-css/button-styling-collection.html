@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Button Styling Collection</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    text-align:center;
+    padding:40px;
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+/* Base Button Style */
+
+.btn{
+    border:none;
+    padding:12px 25px;
+    margin:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition: all 0.3s ease;
+}
+
+/* Different Sizes */
+
+.small{
+    padding:6px 14px;
+    font-size:12px;
+}
+
+.medium{
+    padding:12px 25px;
+}
+
+.large{
+    padding:18px 40px;
+    font-size:20px;
+}
+
+/* Colors */
+
+.primary{
+    background:#007BFF;
+    color:white;
+}
+
+.success{
+    background:#28a745;
+    color:white;
+}
+
+.danger{
+    background:#dc3545;
+    color:white;
+}
+
+/* Shapes */
+
+.rounded{
+    border-radius:8px;
+}
+
+.pill{
+    border-radius:50px;
+}
+
+.circle{
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    padding:0;
+}
+
+/* Hover Effects */
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Focus State */
+
+.btn:focus{
+    outline:3px solid #ffd43b;
+}
+
+/* Gradient Button */
+
+.gradient{
+    background:linear-gradient(45deg,#ff7e5f,#feb47b);
+    color:white;
+}
+
+/* Shadow Button */
+
+.shadow{
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Disabled State */
+
+.btn:disabled{
+    background:#ccc;
+    color:#666;
+    cursor:not-allowed;
+    box-shadow:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Button Styling Collection</h1>
+
+<h2>Different Sizes</h2>
+<button class="btn primary small">Small</button>
+<button class="btn primary medium">Medium</button>
+<button class="btn primary large">Large</button>
+
+<h2>Different Colors</h2>
+<button class="btn primary rounded">Primary</button>
+<button class="btn success rounded">Success</button>
+<button class="btn danger rounded">Danger</button>
+
+<h2>Different Shapes</h2>
+<button class="btn success rounded">Rounded</button>
+<button class="btn primary pill">Pill</button>
+<button class="btn danger circle">+</button>
+
+<h2>Gradient and Shadow Buttons</h2>
+<button class="btn gradient pill">Gradient Button</button>
+<button class="btn primary shadow">Shadow Button</button>
+
+<h2>Disabled Button</h2>
+<button class="btn primary" disabled>Disabled Button</button>
+
+</body>
+</html>

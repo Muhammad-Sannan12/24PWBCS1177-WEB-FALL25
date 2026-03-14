@@ -1,0 +1,109 @@
+/* General Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* Horizontal Navigation */
+
+.navbar{
+background:#333;
+}
+
+.nav-menu{
+list-style:none;
+display:flex;
+justify-content:center;
+}
+
+.nav-menu li{
+position:relative;
+}
+
+.nav-menu a{
+display:block;
+padding:15px 25px;
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+/* Hover State */
+
+.nav-menu a:hover{
+background:#555;
+}
+
+/* Active State */
+
+.nav-menu .active{
+background:#ff6600;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+display:none;
+position:absolute;
+background:#444;
+top:100%;
+left:0;
+list-style:none;
+min-width:150px;
+}
+
+.dropdown-menu li a{
+padding:12px;
+display:block;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+/* Vertical Navigation */
+
+.vertical-nav{
+width:200px;
+margin:30px;
+border:1px solid #ddd;
+}
+
+.vertical-nav ul{
+list-style:none;
+}
+
+.vertical-nav a{
+display:block;
+padding:12px;
+text-decoration:none;
+color:#333;
+border-bottom:1px solid #eee;
+transition:0.3s;
+}
+
+.vertical-nav a:hover{
+background:#f4f4f4;
+}
+
+.vertical-nav .active{
+background:#ff6600;
+color:white;
+}
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+.nav-menu{
+flex-direction:column;
+align-items:center;
+}
+
+.dropdown-menu{
+position:static;
+}
+
+}

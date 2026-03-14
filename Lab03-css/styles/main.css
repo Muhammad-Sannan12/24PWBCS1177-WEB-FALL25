@@ -1,0 +1,96 @@
+
+/* ------------------ BASIC SELECTORS (5) ------------------ */
+
+/* 1. Element Selector */
+h1 {
+  color: darkblue;
+}
+
+/* 2. Class Selector */
+.box {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* 3. ID Selector */
+#special {
+  color: red;
+}
+
+/* 4. Universal Selector */
+* {
+  font-family: Arial;
+}
+
+/* 5. Group Selector */
+h2, p {
+  color: green;
+}
+
+
+/* ------------------ ATTRIBUTE SELECTORS (3) ------------------ */
+
+input[type="text"] {
+  border: 2px solid blue;
+}
+
+input[type="password"] {
+  border: 2px solid red;
+}
+
+a[target="_blank"] {
+  color: orange;
+}
+
+
+/* ------------------ COMBINATORS (4) ------------------ */
+
+div p {
+  background-color: #f2f2f2;
+}
+
+ul > li {
+  color: purple;
+}
+h2 + p {
+  font-weight: bold;
+}
+
+h2 ~ span {
+  color: brown;
+}
+
+
+/* ------------------ PSEUDO CLASSES (5) ------------------ */
+
+a:hover {
+  color: red;
+}
+input:focus {
+  background-color: lightyellow;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  color: blue;
+}
+
+button:active {
+  background-color: gray;
+}
+
+
+/* ------------------ PSEUDO ELEMENTS (2) ------------------ */
+
+p::first-letter {
+  font-size: 30px;
+  color: darkred;
+}
+
+p::after {
+  content: " ✔";
+  color: green;
+}
