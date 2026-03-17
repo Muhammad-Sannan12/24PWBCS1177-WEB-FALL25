@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* Reset & base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #f5f5f5;
+}
+
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+header.header h1 {
+    font-size: 1.5rem;
+}
+
+header.header .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Grid container */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+/* Product Grid */
+.product-grid {
+    grid-area: main;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    color: #333;
+    font-weight: bold;
+}
+
+.product-card button {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #555;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header.header .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        grid-template-areas: 
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        transform: translateX(250px);
+        left: 0;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+    <header class="header">
+        <h1>ShopEasy</h1>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <ul>
+                <li><input type="checkbox" id="category1"> <label for="category1">Category 1</label></li>
+                <li><input type="checkbox" id="category2"> <label for="category2">Category 2</label></li>
+                <li><input type="checkbox" id="category3"> <label for="category3">Category 3</label></li>
+            </ul>
+        </aside>
+
+        <main class="product-grid">
+            <article class="product-card">
+                <img src="../images/products/watch1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="../images/products/watch2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="../images/products/watch3.jpg" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$19.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="../images/products/watch3.jpg" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <!-- Add more product cards as needed -->
+        </main>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

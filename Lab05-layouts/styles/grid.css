@@ -1,0 +1,60 @@
+
+
+body{
+    font-family: Arial;
+    height: 2000px;
+}
+
+/* Common box styling */
+.box{
+    width:200px;
+    height:100px;
+    padding:10px;
+    color:white;
+    margin:20px;
+}
+
+/* 1. Static (Default) */
+.static-box{
+    position: static;
+    background: gray;
+}
+
+/* 2. Relative */
+.relative-box{
+    position: relative;
+    left:50px;
+    top:20px;
+    background: blue;
+}
+
+/* 3. Absolute */
+.container{
+    position: relative;
+    border:2px solid black;
+    height:200px;
+    margin:40px;
+}
+
+.absolute-box{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:red;
+}
+
+/* 4. Fixed */
+.fixed-box{
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    background:green;
+}
+
+/* 5. Sticky */
+.sticky-box{
+    position: sticky;
+    top:0;
+    background:purple;
+}
+

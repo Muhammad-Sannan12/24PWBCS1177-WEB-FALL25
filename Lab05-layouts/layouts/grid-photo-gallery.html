@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Photo Gallery</title>
+</head>
+<body>
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#111;
+padding:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+grid-auto-rows:200px;
+gap:15px;
+}
+
+/* Masonry style */
+.item{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+.item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.4s;
+}
+
+/* Different heights for masonry effect */
+
+.item1{grid-row:span 2;}
+.item2{grid-row:span 3;}
+.item3{grid-row:span 2;}
+.item4{grid-row:span 1;}
+.item5{grid-row:span 3;}
+.item6{grid-row:span 2;}
+
+/* Overlay */
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+opacity:0;
+transition:0.4s;
+}
+
+/* Hover effects */
+
+.item:hover img{
+transform:scale(1.1);
+}
+
+.item:hover .overlay{
+opacity:1;
+}
+</style>
+<div class="gallery">
+
+  <div class="item item1">
+    <img src="../images/nature/green.jpg">
+    <div class="overlay">Mountain</div>
+  </div>
+
+  <div class="item item2">
+    <img src="../images/nature/mountains.jpg">
+    <div class="overlay">Forest</div>
+  </div>
+
+  <div class="item item3">
+    <img src="../images/nature/nature.jpg">
+    <div class="overlay">Beach</div>
+  </div>
+
+  <div class="item item4">
+    <img src="../images/nature/river.jpg">
+    <div class="overlay">City</div>
+  </div>
+
+  <div class="item item5">
+    <img src="../images/nature/mountains.jpg">
+    <div class="overlay">River</div>
+  </div>
+
+  <div class="item item6">
+    <img src="../images/nature/green.jpg">
+    <div class="overlay">Nature</div>
+  </div>
+
+</div>
+
+</body>
+</html>

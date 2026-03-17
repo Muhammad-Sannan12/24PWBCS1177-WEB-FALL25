@@ -1,0 +1,20 @@
+
+.container {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* clearfix */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.box {
+    float: left;
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+    background: lightblue;
+}

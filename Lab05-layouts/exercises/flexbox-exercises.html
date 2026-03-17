@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Float Challenges and Solutions</title>
+
+<link rel="stylesheet" href="../styles/flex.css">
+</head>
+
+<body>
+
+<h1>Exercise 4: Float Challenges and Solutions</h1>
+
+<!-- Challenge 1 -->
+<section>
+
+<h2>1. Float Collapse Solution (Clearfix)</h2>
+
+<p>
+Problem: When elements are floated, the parent container collapses.
+Solution: Use clearfix to force the parent to wrap around floated elements.
+</p>
+
+<div class="clearfix" style="border:2px solid black;">
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+</div>
+
+</section>
+
+<!-- Challenge 2 -->
+<section>
+
+<h2>2. Equal Height Columns</h2>
+
+<p>
+Using floats to create columns with equal minimum height.
+</p>
+
+<div class="clearfix">
+<div class="column">Column 1</div>
+<div class="column">Column 2 with more content to increase height</div>
+<div class="column">Column 3</div>
+</div>
+
+</section>
+
+<!-- Challenge 3 -->
+<section>
+
+<h2>3. Float Based Grid System</h2>
+
+<p>
+A simple grid system using percentage widths.
+</p>
+
+<div class="clearfix">
+<div class="col-3">25%</div>
+<div class="col-6">50%</div>
+<div class="col-3">25%</div>
+</div>
+
+<br>
+
+<div class="clearfix">
+<div class="col-4">33%</div>
+<div class="col-4">33%</div>
+<div class="col-4">33%</div>
+</div>
+
+</section>
+
+<!-- Challenge 4 -->
+<section>
+
+<h2>4. Responsive Floats with Media Queries</h2>
+
+<p>
+Columns change layout depending on screen size.
+</p>
+
+<div class="clearfix">
+<div class="responsive">Column 1</div>
+<div class="responsive">Column 2</div>
+<div class="responsive">Column 3</div>
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Card Layout</title>
+</head>
+<body>
+<style>body{
+  font-family: Arial;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Cards */
+.card{
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Actions Bottom */
+.card-actions{
+  margin-top: auto;
+}
+
+button{
+  padding: 10px 15px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Mobile → 1 column */
+.card{
+  flex: 1 1 100%;
+}
+
+/* Tablet → 2 columns */
+@media (min-width: 600px){
+  .card{
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Desktop → 3 columns */
+@media (min-width: 900px){
+  .card{
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}</style>
+<div class="container">
+
+  <div class="card">
+    <h3>Card Title 1</h3>
+    <p>This is some short content.</p>
+    <div class="card-actions">
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Card Title 2</h3>
+    <p>This card has more content to demonstrate equal height cards in flexbox layout. Flexbox keeps cards same height.</p>
+    <div class="card-actions">
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Card Title 3</h3>
+    <p>Another card example.</p>
+    <div class="card-actions">
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Card Title 4</h3>
+    <p>Flexbox allows flexible layouts.</p>
+    <div class="card-actions">
+      <button>Read More</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positioning Challenge</title>
+    <link rel="stylesheet" href="../styles/position-challenge.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h2>My Website</h2>
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <div class="sticky-box">Sticky Item 1</div>
+        <div class="sticky-box">Sticky Item 2</div>
+    </aside>
+
+    <main class="content">
+        <h1>Main Content</h1>
+        <p>This is the main area of the page.</p>
+
+        <button onclick="openModal()">Open Modal</button>
+    </main>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h2>Modal Dialog</h2>
+        <p>This is an absolutely positioned modal.</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script>
+function openModal(){
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

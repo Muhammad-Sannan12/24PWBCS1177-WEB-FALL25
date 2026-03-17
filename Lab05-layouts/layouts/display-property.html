@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Property Showcase</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+    background:#f4f4f4;
+}
+
+h2{
+    background:#333;
+    color:white;
+    padding:10px;
+}
+
+/* ---------------- BLOCK ---------------- */
+.block-demo div{
+    display:block;
+    background:#4CAF50;
+    color:white;
+    padding:10px;
+    margin:5px 0;
+}
+
+/* ---------------- INLINE ---------------- */
+.inline-demo span{
+    display:inline;
+    background:#2196F3;
+    color:white;
+    padding:8px;
+}
+
+/* ---------------- INLINE BLOCK ---------------- */
+.inline-block-demo div{
+    display:inline-block;
+    width:150px;
+    height:60px;
+    background:#FF9800;
+    color:white;
+    text-align:center;
+    line-height:60px;
+    margin:5px;
+}
+
+/* ---------------- TABLE WITHOUT TABLE ---------------- */
+.table{
+    display:table;
+    width:100%;
+    border:2px solid black;
+    margin-top:10px;
+}
+
+.row{
+    display:table-row;
+}
+
+.cell{
+    display:table-cell;
+    border:1px solid black;
+    padding:10px;
+    text-align:center;
+}
+
+/* ---------------- HIDDEN ELEMENTS ---------------- */
+
+.hidden-display{
+    display:none;
+}
+
+.hidden-visibility{
+    visibility:hidden;
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+@media (max-width:768px){
+
+    body{
+        background:#e3f2fd;
+    }
+
+    .inline-block-demo div{
+        display:block;
+        width:100%;
+    }
+
+    .hide-mobile{
+        display:none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Display Property Showcase</h1>
+
+<!-- Block vs Inline vs Inline-Block -->
+
+<h2>1. Block Elements</h2>
+<div class="block-demo">
+<div>Block Element 1</div>
+<div>Block Element 2</div>
+<div>Block Element 3</div>
+</div>
+
+<p><b>Explanation:</b> Block elements take full width and start on a new line.</p>
+
+
+<h2>2. Inline Elements</h2>
+<div class="inline-demo">
+<span>Inline 1</span>
+<span>Inline 2</span>
+<span>Inline 3</span>
+</div>
+
+<p><b>Explanation:</b> Inline elements stay in the same line and only take needed width.</p>
+
+
+<h2>3. Inline-Block Elements</h2>
+<div class="inline-block-demo">
+<div>Box 1</div>
+<div>Box 2</div>
+<div>Box 3</div>
+</div>
+
+<p><b>Explanation:</b> Inline-block elements stay in one line but allow width & height.</p>
+
+
+<!-- Table without table -->
+
+<h2>4. Table Layout without Table Tag</h2>
+
+<div class="table">
+<div class="row">
+<div class="cell">Name</div>
+<div class="cell">Course</div>
+<div class="cell">Semester</div>
+</div>
+
+<div class="row">
+<div class="cell">Ali</div>
+<div class="cell">Web Technologies</div>
+<div class="cell">4th</div>
+</div>
+
+<div class="row">
+<div class="cell">Ahmed</div>
+<div class="cell">Database</div>
+<div class="cell">3rd</div>
+</div>
+</div>
+
+<p><b>Explanation:</b> This layout uses CSS display values like table, table-row, and table-cell.</p>
+
+
+<!-- Hidden elements -->
+
+<h2>5. Hidden Elements Demonstration</h2>
+
+<p>This text is visible.</p>
+
+<p class="hidden-display">You cannot see this (display:none removes element).</p>
+
+<p class="hidden-visibility">This text is hidden but space remains (visibility:hidden).</p>
+
+<p class="hide-mobile">This text disappears on mobile screens.</p>
+
+</body>
+</html>

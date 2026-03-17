@@ -1,0 +1,47 @@
+
+
+        body{
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        /* Block elements */
+        .block-box{
+            display: block;
+            background-color: lightblue;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        /* Inline elements */
+        .inline-box{
+            display: inline;
+            background-color: lightgreen;
+            padding: 5px;
+        }
+
+        /* Inline-block elements */
+        .inline-block-box{
+            display: inline-block;
+            width: 120px;
+            height: 60px;
+            background-color: orange;
+            margin: 10px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        /* Hidden elements */
+        .none-box{
+            display: none;
+            background: red;
+            padding: 10px;
+        }
+
+        .hidden-box{
+            visibility: hidden;
+            background: purple;
+            padding: 10px;
+        }
+
+    
